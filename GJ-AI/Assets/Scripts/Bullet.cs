@@ -17,10 +17,8 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         
     }
 
@@ -32,8 +30,7 @@ public class Bullet : MonoBehaviour
             if (col.gameObject.CompareTag("Enemy"))
             {
             enemy.TakeDame(damage);
-            Debug.Log("Dame");
-                StartCoroutine(WaitDestroy(0));
+            StartCoroutine(WaitDestroy(0));
             }
         }
         else if (col.gameObject.CompareTag("Ground"))
@@ -42,11 +39,11 @@ public class Bullet : MonoBehaviour
         }
 
     }
-    IEnumerator WaitDestroy(float timedetroy)
+    IEnumerator WaitDestroy(float timedestroy)
     {
         //move = false;
         yield return new WaitForSeconds(0.03f);
-        Destroy(gameObject, timedetroy);
+        Destroy(gameObject, timedestroy);
         rb.velocity = Vector2.zero;
         rb.gravityScale = 0f;
     }

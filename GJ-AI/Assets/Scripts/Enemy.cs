@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         if (heart <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject);//Hủy quái
         }
     }
     

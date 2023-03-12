@@ -40,4 +40,22 @@ public class Player : MonoBehaviour
             ani.SetBool("Run", false);
         }
     }
+    
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        House house = col.GetComponent<House>();
+        if (col.gameObject.CompareTag("House"))
+        {
+            house.btnUpdate.gameObject.SetActive(true);//Hiện nút Update
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        House house = col.GetComponent<House>();
+        if (col.gameObject.CompareTag("House"))
+        {
+            house.btnUpdate.gameObject.SetActive(false);//Ẩn nút Update
+        }
+    }
 }

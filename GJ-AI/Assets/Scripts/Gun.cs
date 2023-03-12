@@ -28,7 +28,7 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButton(0) && timeWait < Time.time)
         {
            // anim.SetTrigger("Attack");
-            timeWait = Time.time + timeAttack;
+            timeWait = Time.time + timeAttack;//Thời gian chờ cho lần bắn tiếp
             Shoot();
         }
         if (transform.rotation.z < 0.7f && transform.rotation.z > -0.7f)
@@ -46,6 +46,6 @@ public class Gun : MonoBehaviour
     private void Shoot()
     {
         GameObject newWeapon = Instantiate(weapon, shotPoint.position, shotPoint.rotation);
-        newWeapon.GetComponent<Rigidbody2D>().velocity = transform.right * lauchForce;
+        newWeapon.GetComponent<Rigidbody2D>().velocity = transform.right * lauchForce;//Tạo đạn
     }
 }
