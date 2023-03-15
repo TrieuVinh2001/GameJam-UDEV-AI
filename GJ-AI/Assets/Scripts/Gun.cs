@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject weapon;
+    public GameObject bullet;
     public float lauchForce;
     public Transform shotPoint;
     private float timeWait;
@@ -45,7 +45,7 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject newWeapon = Instantiate(weapon, shotPoint.position, shotPoint.rotation);
-        newWeapon.GetComponent<Rigidbody2D>().velocity = transform.right * lauchForce;//Tạo đạn
+        GameObject newBullet = Instantiate(bullet, shotPoint.position, shotPoint.rotation);
+        newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * lauchForce;//Tạo đạn
     }
 }

@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        Destroy(gameObject, 2f);
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         }
         else if (col.gameObject.CompareTag("Ground"))
         {
-            StartCoroutine(WaitDestroy(2f));
+            StartCoroutine(WaitDestroy(0f));
         }
 
     }

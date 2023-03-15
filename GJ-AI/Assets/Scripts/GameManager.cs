@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
 
     public Text coinText;
     public Text coinTimeText;
+
+    public int levelWeapon;
+
     private void Awake()
     {
         instance = this;
@@ -26,7 +29,6 @@ public class GameManager : MonoBehaviour
     {
         coinTimeText.text = coinTime + "/s";
         coinText.text = "Coin: " + coin;
-
     }
 
     public void AddCoinTime(int coinNumber)

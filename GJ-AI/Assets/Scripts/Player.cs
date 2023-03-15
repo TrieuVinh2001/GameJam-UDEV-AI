@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float heart;
     public float speed;
     Rigidbody2D rb;
     private Animator ani;
-    public GameObject gun;
+    public GameObject weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class Player : MonoBehaviour
             //ani.SetTrigger("Run");
             ani.SetBool("Run", true);
             transform.localScale = new Vector3(-1f, 1f, 1f);
-            gun.transform.localScale = new Vector3(-1f, -1f, 1f);
+            weapon.transform.localScale = new Vector3(-1f, -1f, 1f);
         }
         else if (Input.GetKey(KeyCode.D))
         {
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
             //ani.SetTrigger("Run");
             ani.SetBool("Run", true);
             transform.localScale = new Vector3(1f, 1f, 1f);
-            gun.transform.localScale = new Vector3(1f, 1f, 1f);
+            weapon.transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else
         {
@@ -44,18 +45,29 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         House house = col.GetComponent<House>();
+        WeaponFactory weaponFactory = col.GetComponent<WeaponFactory>();
         if (col.gameObject.CompareTag("House"))
         {
             house.btnUpdate.gameObject.SetActive(true);//Hiện nút Update
         }
+        else if (col.gameObject.CompareTag("WeaponFactory"))
+        {
+            weaponFactory.btnUpdate.gameObject.SetActive(true);//Hiện nút Update
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
         House house = col.GetComponent<House>();
+        WeaponFactory weaponFactory = col.GetComponent<WeaponFactory>();
         if (col.gameObject.CompareTag("House"))
         {
             house.btnUpdate.gameObject.SetActive(false);//Ẩn nút Update
+        }
+        else if (col.gameObject.CompareTag("WeaponFactory"))
+        {
+            weaponFactory.btnUpdate.gameObject.SetActive(false);//Ẩn nút Update
         }
     }
 }
