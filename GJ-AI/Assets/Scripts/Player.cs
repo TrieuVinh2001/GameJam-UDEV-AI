@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (heart <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += new Vector3(1f, 0f, 0f) * -speed * Time.deltaTime;
@@ -42,6 +47,11 @@ public class Player : MonoBehaviour
         }
     }
     
+    public void TakeDamage(float damage)
+    {
+        heart -= damage;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         House house = col.GetComponent<House>();

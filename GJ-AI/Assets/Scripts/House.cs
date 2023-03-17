@@ -29,6 +29,10 @@ public class House : MonoBehaviour
     void Update()
     {
         levelText.text = "LV:" + levelCurren;
+        if (heart <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void BtnUpdate()
@@ -45,9 +49,11 @@ public class House : MonoBehaviour
                     GameManager.instance.AddCoinTime(addCoin[i]);//Tăng tiền cộng thêm theo mỗi cấp nhà
                 }
             }
-        }
-        
-        
+        }  
     }
     
+    public void TakeDamage(float damage)
+    {
+        heart -= damage;
+    }
 }
