@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody2D rb;
     public float damage;
+    public GameObject bulletExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +30,10 @@ public class Bullet : MonoBehaviour
         {
             if (col.gameObject.CompareTag("Enemy"))
             {
-            enemy.TakeDame(damage);
-            StartCoroutine(WaitDestroy(0));
+                enemy.TakeDame(damage);
+                Instantiate(bulletExplosion, enemy.transform.position,Quaternion.identity);
+
+                StartCoroutine(WaitDestroy(0));
             }
         }
         else if (col.gameObject.CompareTag("Ground"))

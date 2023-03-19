@@ -31,8 +31,14 @@ public class Enemy : MonoBehaviour
         rb.velocity = new Vector2(-speed, rb.velocity.y);
         if (heart <= 0)
         {
+            speed = 0;
             anim.SetBool("Die", true);
-            Destroy(gameObject,2f);//Hủy quái
+            Destroy(gameObject,0.5f);//Hủy quái
+        }
+
+        if (speed > 0)
+        {
+            anim.SetBool("Run", true);
         }
 
         if (isAttack)
@@ -50,7 +56,8 @@ public class Enemy : MonoBehaviour
     {
         Player player = collision.GetComponent<Player>();
         House house = collision.GetComponent<House>();
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House"))
+        WeaponFactory weaponFactory = collision.GetComponent<WeaponFactory>();
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory"))
         {
             isAttack = true;
         }
@@ -59,7 +66,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory"))
         {
             speed = speedStart;
             isAttack = false;
@@ -94,6 +101,7 @@ public class Enemy : MonoBehaviour
         {
             Player health = players[0].GetComponent<Player>();
             House house = players[0].GetComponent<House>();
+            WeaponFactory weaponFactory = players[0].GetComponent<WeaponFactory>();
             if (Time.time >= nextAttackTime)
             {
                 nextAttackTime = Time.time + attackWaitTime;
@@ -108,6 +116,11 @@ public class Enemy : MonoBehaviour
                 {
                     house.TakeDamage(damage);
                 }
+                if (weaponFactory != null)
+                {
+                    weaponFactory.TakeDamage(damage);
+                }
+
                 //players[0].GetComponent<Health>().TakeDamage(damage);
             }
         }

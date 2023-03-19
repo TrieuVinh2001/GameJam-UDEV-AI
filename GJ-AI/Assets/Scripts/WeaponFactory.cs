@@ -36,7 +36,9 @@ public class WeaponFactory : MonoBehaviour
             levelCurren += 1;//tăng cấp nhà
             GameManager.instance.levelWeapon = levelCurren;
         }
-
-
+    }
+    public void TakeDamage(float damage)
+    {
+        heart -= damage;
     }
 }
