@@ -26,15 +26,29 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         Enemy enemy = col.GetComponent<Enemy>();
-        if (enemy != null)
+        EnemyBom enemyBom = col.GetComponent<EnemyBom>();
+        EnemyFly enemyFly = col.GetComponent<EnemyFly>();
+        if (enemy != null || enemyBom !=null || enemyFly !=null)
         {
             if (col.gameObject.CompareTag("Enemy"))
             {
                 enemy.TakeDame(damage);
                 Instantiate(bulletExplosion, enemy.transform.position,Quaternion.identity);
 
-                StartCoroutine(WaitDestroy(0));
             }
+            else if (col.gameObject.CompareTag("EnemyFly"))
+            {
+                Debug.Log(col);
+                enemyFly.TakeDame(damage);
+                Instantiate(bulletExplosion, enemyFly.transform.position, Quaternion.identity);
+            }
+            else if(col.gameObject.CompareTag("EnemyBom"))
+            {
+                enemyBom.TakeDame(damage);
+                Instantiate(bulletExplosion, enemyBom.transform.position, Quaternion.identity);
+            }
+            
+            StartCoroutine(WaitDestroy(0));
         }
         else if (col.gameObject.CompareTag("Ground"))
         {

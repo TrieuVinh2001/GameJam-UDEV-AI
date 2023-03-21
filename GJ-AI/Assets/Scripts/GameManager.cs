@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int coinTime;
     public int coin;
-
+    public int bulletCount;
     public Text coinText;
     public Text coinTimeText;
-
+    public Text bulletCountText;
     public int levelWeapon;
 
     private void Awake()
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         coinTimeText.text = coinTime + "/s";
         coinText.text = "Coin: " + coin;
+        bulletCountText.text = "x" + bulletCount +"/100";
     }
 
     public void AddCoinTime(int coinNumber)
@@ -45,4 +46,5 @@ public class GameManager : MonoBehaviour
             coin += coinTime;
         }
     }
+
 }

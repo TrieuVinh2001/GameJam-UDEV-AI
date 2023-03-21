@@ -25,7 +25,7 @@ public class Gun : MonoBehaviour
         Vector2 direction = mousePosition - weaponPosition;
         transform.right = direction;
 
-        if (Input.GetMouseButton(0) && timeWait < Time.time)
+        if (Input.GetMouseButton(0) && timeWait < Time.time && GameManager.instance.bulletCount>0)
         {
            // anim.SetTrigger("Attack");
             timeWait = Time.time + timeAttack;//Thời gian chờ cho lần bắn tiếp
@@ -45,6 +45,7 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
+        GameManager.instance.bulletCount -= 1;
         GameObject newBullet = Instantiate(bullet, shotPoint.position, shotPoint.rotation);
         newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * lauchForce;//Tạo đạn
     }

@@ -8,6 +8,9 @@ TagManager:
   - Ground
   - House
   - WeaponFactory
+  - EnemyBom
+  - EnemyFly
+  - BulletFactory
   layers:
   - Default
   - TransparentFX
@@ -21,10 +24,10 @@ TagManager:
   - Player
   - House
   - WeaponFactory
-  - 
-  - 
-  - 
-  - 
+  - EnemyBom
+  - EnemyFly
+  - Ignore
+  - BulletFactory
   - 
   - 
   - 

@@ -143,3 +143,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  bulletExplosion: {fileID: 7679978469742014610, guid: 6cecd097552b9ca4e8361d52bb2c56bc,
+    type: 3}

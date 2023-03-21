@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     public float speed;
     private float speedStart;
     private bool isAttack;
-    private bool isMove;
     public float damage;
     public float attackRange;
     public float attackWaitTime;
@@ -57,7 +56,8 @@ public class Enemy : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         House house = collision.GetComponent<House>();
         WeaponFactory weaponFactory = collision.GetComponent<WeaponFactory>();
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory"))
+        BulletFactory bulletFactory = collision.GetComponent<BulletFactory>();
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory")|| collision.gameObject.CompareTag("BulletFactory"))
         {
             isAttack = true;
         }
@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory") || collision.gameObject.CompareTag("BulletFactory"))
         {
             speed = speedStart;
             isAttack = false;
@@ -102,6 +102,7 @@ public class Enemy : MonoBehaviour
             Player health = players[0].GetComponent<Player>();
             House house = players[0].GetComponent<House>();
             WeaponFactory weaponFactory = players[0].GetComponent<WeaponFactory>();
+            BulletFactory bulletFactory = players[0].GetComponent<BulletFactory>();
             if (Time.time >= nextAttackTime)
             {
                 nextAttackTime = Time.time + attackWaitTime;
@@ -119,6 +120,10 @@ public class Enemy : MonoBehaviour
                 if (weaponFactory != null)
                 {
                     weaponFactory.TakeDamage(damage);
+                }
+                if (bulletFactory != null)
+                {
+                    bulletFactory.TakeDamage(damage);
                 }
 
                 //players[0].GetComponent<Health>().TakeDamage(damage);
