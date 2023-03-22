@@ -18,9 +18,16 @@ public class EnemyFly : MonoBehaviour
     public GameObject bullet;
     public float fireRate = 1f;
     private float nextFireTime=0f;
+    private BoxCollider2D box;
 
     void Start()
     {
+        if (transform.position.x < 0)
+        {
+            speed = -speed;
+            gameObject.transform.localScale = new Vector3(-2f, 2f, 1f);
+        }
+        box = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -32,24 +39,37 @@ public class EnemyFly : MonoBehaviour
         rb.velocity = new Vector2(-speed, rb.velocity.y);
         if (heart <= 0)
         {
+            box.enabled = false;
             speed = 0;
             anim.SetBool("Die", true);
             Destroy(gameObject, 0.5f);//Hủy quái
         }
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer <= shootingRange )
+        if (player != null)
         {
-            speed = 0;
-            if(nextFireTime < Time.time)//Time.time là thời gian hiện tại
+            float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+            if (distanceFromPlayer <= shootingRange)
             {
-                Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + fireRate;//cộng thêm fireRate nghĩa là đợi thêm 1 lúc nữa để bắn
-            }      
+                speed = 0;
+                if (nextFireTime < Time.time)//Time.time là thời gian hiện tại
+                {
+                    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+                    nextFireTime = Time.time + fireRate;//cộng thêm fireRate nghĩa là đợi thêm 1 lúc nữa để bắn
+                }
+            }
+            else
+            {
+                if (transform.position.x > player.position.x)
+                {
+                    speed = 2;
+                }
+                else
+                {
+                    speed = -2;
+                }
+
+            }
         }
-        else
-        {
-            speed = 2;
-        }
+        
 
     }
 

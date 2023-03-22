@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5032917616580735777, guid: da4db87ea78934a43ad5b64a3f618048, type: 3}
-  lauchForce: 8
+  lauchForce: 7.5
   shotPoint: {fileID: 5878923834170674725}
-  timeAttack: 0.4
+  timeAttack: 0.45
   character: {fileID: 0}
 --- !u!50 &5878923833506223736
 Rigidbody2D:

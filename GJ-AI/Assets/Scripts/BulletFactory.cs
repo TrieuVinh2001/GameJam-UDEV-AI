@@ -6,12 +6,24 @@ using UnityEngine.UI;
 public class BulletFactory : MonoBehaviour
 {
     public float heart;//Máu công trình
+    
     public Button btnBuy;//Nút nâng cấp
-
+    public Image healthImage;
+    private float heartMax;
     // Start is called before the first frame update
     void Start()
     {
+        heartMax = heart;
         btnBuy.gameObject.SetActive(false);//Ẩn nút nâng cấp
+    }
+
+    private void Update()
+    {
+        healthImage.fillAmount = heart / heartMax;
+        if (heart <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void BtnBuy()

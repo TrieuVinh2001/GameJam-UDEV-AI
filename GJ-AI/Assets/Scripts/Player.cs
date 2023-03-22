@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
         hpImage.fillAmount = heart / maxHeart;
         if (heart <= 0)
         {
+            GameManager.instance.LossGame();
             Destroy(gameObject);
         }
 

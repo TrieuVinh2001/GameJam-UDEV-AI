@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4305630619841843761
 Transform:
   m_ObjectHideFlags: 0
@@ -145,13 +145,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262497634fb73ee44802042070130ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: 6
+  heart: 4
   speed: 2
   damage: 5
   attackRange: 1
   playerLayers:
     serializedVersion: 2
-    m_Bits: 3584
+    m_Bits: 36352
   attackPoint: {fileID: 4305630620934308698}
 --- !u!95 &4305630619841843765
 Animator:

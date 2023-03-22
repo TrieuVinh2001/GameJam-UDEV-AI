@@ -13,9 +13,16 @@ public class EnemyBom : MonoBehaviour
     public Transform attackPoint;//Vị trí tấn công
     private Animator anim;
     private Rigidbody2D rb;
+    private BoxCollider2D box;
     // Start is called before the first frame update
     void Start()
     {
+        if (transform.position.x < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-3f, 3f, 1f);
+            speed = -speed;
+        }
+        box = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -26,6 +33,7 @@ public class EnemyBom : MonoBehaviour
         rb.velocity = new Vector2(-speed, rb.velocity.y);
         if (heart <= 0)
         {
+            box.enabled = false;
             speed = 0;
             anim.SetBool("Die", true);
             Destroy(gameObject, 0.5f);//Hủy quái

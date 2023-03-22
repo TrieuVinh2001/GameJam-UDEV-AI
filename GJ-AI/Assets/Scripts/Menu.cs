@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
     public string levelName;
 
     public void LoadLevel()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(levelName);
     }
 
@@ -30,7 +32,7 @@ public class Menu : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Menu");
     }
 
     public void Exit()

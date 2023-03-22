@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class House : MonoBehaviour
 {
     public float heart;//Máu công trình
+    private float heartMax;
     public GameObject btnUpdate;//Nút nâng cấp
 
     public int[] level, coinUp, addCoin;//cấp độ nhà, tiền nâng cấp, tiền cộng thêm từ nhà sau mỗi cấp
@@ -15,6 +16,8 @@ public class House : MonoBehaviour
     public Text levelText;
     public Text coinMinusText, coinAddText;
 
+    public Image healthImage;
+
     private void Awake()
     {
         btnUpdate.gameObject.SetActive(false);//Ẩn nút nâng cấp
@@ -23,7 +26,7 @@ public class House : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        heartMax = heart;
         levelCurren = 1;
         levelText.text = "LV:" + levelCurren;
         coinAddText.text = "+" + addCoin[0] + "/s";
@@ -35,9 +38,11 @@ public class House : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthImage.fillAmount = heart / heartMax;
         levelText.text = "LV:" + levelCurren;
         if (heart <= 0)
         {
+            GameManager.instance.LossGame();
             Destroy(gameObject);
         }
     }
@@ -53,8 +58,6 @@ public class House : MonoBehaviour
             {
                 if (levelCurren == level[i])
                 {
-                    
-                    
                     GameManager.instance.AddCoinTime(addCoin[i]);//Tăng tiền cộng thêm theo mỗi cấp nhà
                     if(levelCurren == level.Length)
                     {

@@ -38,7 +38,6 @@ public class Bullet : MonoBehaviour
             }
             else if (col.gameObject.CompareTag("EnemyFly"))
             {
-                Debug.Log(col);
                 enemyFly.TakeDame(damage);
                 Instantiate(bulletExplosion, enemyFly.transform.position, Quaternion.identity);
             }

@@ -14,10 +14,13 @@ public class WeaponFactory : MonoBehaviour
 
     public Text levelText;
     public Text coinMinusText;
+    public Image healthImage;
+    private float heartMax;
 
     // Start is called before the first frame update
     void Start()
     {
+        heartMax = heart;
         btnUpdate.gameObject.SetActive(false);//Ẩn nút nâng cấp
         levelText.text = "LV:" + levelCurren;
         GameManager.instance.levelWeapon = levelCurren;
@@ -27,7 +30,12 @@ public class WeaponFactory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthImage.fillAmount = heart / heartMax;
         levelText.text = "LV:" + levelCurren;
+        if (heart <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void BtnUpdate()

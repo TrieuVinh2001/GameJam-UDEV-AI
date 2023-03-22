@@ -16,10 +16,17 @@ public class Enemy : MonoBehaviour
     public Transform attackPoint;//Vị trí tấn công
     private Animator anim;
     private Rigidbody2D rb;
+    private BoxCollider2D box;
     // Start is called before the first frame update
     void Start()
     {
+        if (transform.position.x < 0)
+        {
+            speed = -speed;
+            gameObject.transform.localScale = new Vector3(-1.5f,1.5f,1f);
+        }
         speedStart = speed;
+        box = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -30,12 +37,13 @@ public class Enemy : MonoBehaviour
         rb.velocity = new Vector2(-speed, rb.velocity.y);
         if (heart <= 0)
         {
+            box.enabled = false;
             speed = 0;
             anim.SetBool("Die", true);
             Destroy(gameObject,0.5f);//Hủy quái
         }
 
-        if (speed > 0)
+        if (speed != 0)
         {
             anim.SetBool("Run", true);
         }
@@ -63,14 +71,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory") || collision.gameObject.CompareTag("BulletFactory"))
+        {
+            isAttack = true;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("House") || collision.gameObject.CompareTag("WeaponFactory") || collision.gameObject.CompareTag("BulletFactory"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             speed = speedStart;
             isAttack = false;
         }
+        
     }
 
     IEnumerator AttackTime()
