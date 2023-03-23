@@ -329,7 +329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nh\xE0 ch\xEDnh"
+  m_Text: House
 --- !u!222 &28014856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1997,7 +1997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -99, y: -60.30005}
+  m_AnchoredPosition: {x: -84, y: -104}
   m_SizeDelta: {x: 80.2, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403037252
@@ -2334,7 +2334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 21, y: -53}
+  m_AnchoredPosition: {x: 36.000004, y: -96.69995}
   m_SizeDelta: {x: 166.8, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422699851
@@ -3090,18 +3090,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 60
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "H\u1EBFt \u0111\u1EA1n"
+  m_Text: No more bullet
 --- !u!222 &742579958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3126,8 +3126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: 0}
-  m_SizeDelta: {x: 222.70001, y: 62.4}
+  m_AnchoredPosition: {x: -161.2, y: 0}
+  m_SizeDelta: {x: 285.2, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &806272678
 GameObject:
@@ -3476,7 +3476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -746.62, y: 391.22}
+  m_AnchoredPosition: {x: -746.62, y: 442.32}
   m_SizeDelta: {x: 354.79, y: 27.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &846376615
@@ -3906,7 +3906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -746.3, y: 390.9}
+  m_AnchoredPosition: {x: -746.3, y: 442}
   m_SizeDelta: {x: 372.3, y: 42.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980441340
@@ -3981,7 +3981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 467.8, y: 489}
+  m_AnchoredPosition: {x: 467.8, y: 540.1}
   m_SizeDelta: {x: 222.70001, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000814168
@@ -4297,8 +4297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.1, y: 166}
-  m_SizeDelta: {x: 291.6, y: 44.2}
+  m_AnchoredPosition: {x: 76.4, y: 166}
+  m_SizeDelta: {x: 318.3, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109511156
 MonoBehaviour:
@@ -4333,7 +4333,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "X\u01B0\u1EDFng v\u0169 kh\xED"
+  m_Text: Weapon Factory
 --- !u!222 &1109511157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5427,7 +5427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 324, y: 489}
+  m_AnchoredPosition: {x: 324, y: 540.1}
   m_SizeDelta: {x: 80.20001, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361156195
@@ -5632,7 +5632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1510, y: 489}
+  m_AnchoredPosition: {x: 1547, y: 529}
   m_SizeDelta: {x: 222.70001, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404013485
@@ -5864,7 +5864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 192, y: 489}
+  m_AnchoredPosition: {x: 192, y: 540.1}
   m_SizeDelta: {x: 328.90002, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1513729379
@@ -6376,7 +6376,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.548387, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7370,8 +7370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57, y: 114}
-  m_SizeDelta: {x: 259.45, y: 44.2}
+  m_AnchoredPosition: {x: 43.438, y: 114}
+  m_SizeDelta: {x: 286.58, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042660402
 MonoBehaviour:
@@ -7406,7 +7406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "X\u01B0\u1EDFng \u0111\u1EA1n"
+  m_Text: Bullet Factory
 --- !u!222 &2042660403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7450,7 +7450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 862, y: 467.4}
+  m_AnchoredPosition: {x: 862, y: 523}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066544803
