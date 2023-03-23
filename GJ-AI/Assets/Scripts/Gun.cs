@@ -12,6 +12,8 @@ public class Gun : MonoBehaviour
     //private Animator anim;
     public Transform character;
 
+    public AudioSource shot;
+
     void Start()
     {
         //anim = GetComponentInParent<Animator>();
@@ -45,6 +47,7 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
+        shot.Play();
         GameManager.instance.bulletCount -= 1;
         GameObject newBullet = Instantiate(bullet, shotPoint.position, shotPoint.rotation);
         newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * lauchForce;//Tạo đạn

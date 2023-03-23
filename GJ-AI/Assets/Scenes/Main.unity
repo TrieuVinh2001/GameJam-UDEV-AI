@@ -4089,9 +4089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7a4e00d81eff14cb420a2f5218de8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinTime: 0
-  coin: 5
-  bulletCount: 20
+  coin: 100
+  bulletCount: 100
   coinText: {fileID: 1488255059}
   coinTimeText: {fileID: 1000814168}
   bulletCountText: {fileID: 1404013485}
@@ -9054,11 +9053,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5878923833506223734, guid: 402dc0670029c054f93dd359190814d1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5878923833506223737, guid: 402dc0670029c054f93dd359190814d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9132,11 +9126,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gun 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7741067417213002150, guid: 84258941befe0e040b263eb069f874b9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7741067417213002151, guid: 84258941befe0e040b263eb069f874b9,
         type: 3}
@@ -9266,6 +9255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208768585150396458, guid: 20ce66c0ce3a9ee49be8668fe3e48402,
+        type: 3}
+      propertyPath: explosion
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20ce66c0ce3a9ee49be8668fe3e48402, type: 3}

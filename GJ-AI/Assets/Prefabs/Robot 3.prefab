@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: 4
   speed: 2
-  damage: 5
+  damage: 10
   attackRange: 1
   playerLayers:
     serializedVersion: 2

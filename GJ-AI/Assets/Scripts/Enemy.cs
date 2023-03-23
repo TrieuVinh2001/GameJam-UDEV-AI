@@ -90,18 +90,6 @@ public class Enemy : MonoBehaviour
         
     }
 
-    IEnumerator AttackTime()
-    {
-        while (true)
-        {
-            anim.SetTrigger("Attacked");
-            isAttack = false;
-            yield return new WaitForSeconds(attackWaitTime);
-            anim.ResetTrigger("Attacked");
-            isAttack = true;
-        }
-        
-    }
 
     IEnumerator EnemyAttack()//Tấn công của enemy
     {

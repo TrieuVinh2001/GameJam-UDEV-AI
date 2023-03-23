@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5394a4d7ed3c8514f911d7caa70042dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: 7
+  heart: 6
   speed: 1
   damage: 3
   attackRange: 1
