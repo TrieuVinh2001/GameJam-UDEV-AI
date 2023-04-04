@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f61fb48f47a8dd43bbf0fb554e4cdc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: 50
+  heart: 100
   btnUpdate: {fileID: 8167489}
   level: 01000000020000000300000004000000
   coinUp: 0a000000190000003c000000
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18032a99082acf409b4275a5fafb51a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: 70
+  heart: 100
   btnUpdate: {fileID: 1359006010}
   level: 010000000200000003000000
   coinUp: 1e0000003c000000
@@ -1186,9 +1186,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 6825492241227536458, guid: c7286dc92975a0b46a9521cf109327e8, type: 3}
   pointSpawn: {fileID: 114291419}
-  timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeWaitStart: 103
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &134207512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,8 +2659,8 @@ MonoBehaviour:
   - {fileID: 8208768585150396461, guid: 20ce66c0ce3a9ee49be8668fe3e48402, type: 3}
   pointSpawn: {fileID: 659442578}
   timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &666993885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   - {fileID: 113227283886977274, guid: 6df45aab6a30e734683dedc764e8619b, type: 3}
   pointSpawn: {fileID: 690317978}
   timeWaitStart: 3
-  timeSpawn: {x: 7, y: 15}
+  timeSpawn: {x: 14, y: 30}
   timeRate: 2
 --- !u!1 &706043100
 GameObject:
@@ -3126,7 +3126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -161.2, y: 0}
+  m_AnchoredPosition: {x: -161.19998, y: 0}
   m_SizeDelta: {x: 285.2, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &806272678
@@ -3563,8 +3563,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 113227283886977274, guid: 6df45aab6a30e734683dedc764e8619b, type: 3}
   pointSpawn: {fileID: 902407061}
-  timeWaitStart: 1
-  timeSpawn: {x: 6, y: 14}
+  timeWaitStart: 5
+  timeSpawn: {x: 15, y: 30}
   timeRate: 2
 --- !u!1 &941374372
 GameObject:
@@ -3596,7 +3596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7a4e00d81eff14cb420a2f5218de8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: 30
+  coin: 40
   bulletCount: 50
   coinText: {fileID: 1488255059}
   coinTimeText: {fileID: 1000814168}
@@ -4072,9 +4072,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 113227283886977274, guid: 6df45aab6a30e734683dedc764e8619b, type: 3}
   pointSpawn: {fileID: 1026259962}
-  timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeWaitStart: 108
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &1079503519
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,9 +4121,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 6825492241227536458, guid: c7286dc92975a0b46a9521cf109327e8, type: 3}
   pointSpawn: {fileID: 1079503520}
-  timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeWaitStart: 103
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &1085424303
 GameObject:
   m_ObjectHideFlags: 0
@@ -5089,7 +5089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8888d93ccc42098459bcb28a5914eebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: 70
+  heart: 100
   btnBuy: {fileID: 1085424304}
   healthImage: {fileID: 1867197885}
 --- !u!212 &1275865706
@@ -5514,9 +5514,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 4305630619841843767, guid: cdc5f05609fd18c43ac6114f0ffe6512, type: 3}
   pointSpawn: {fileID: 1380766796}
-  timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeWaitStart: 105
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &1385938936
 GameObject:
   m_ObjectHideFlags: 0
@@ -5993,8 +5993,8 @@ MonoBehaviour:
   - {fileID: 8208768585150396461, guid: 20ce66c0ce3a9ee49be8668fe3e48402, type: 3}
   pointSpawn: {fileID: 1522310953}
   timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &1565698852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6801,9 +6801,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 4305630619841843767, guid: cdc5f05609fd18c43ac6114f0ffe6512, type: 3}
   pointSpawn: {fileID: 1915174725}
-  timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeWaitStart: 105
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &1922012052
 GameObject:
   m_ObjectHideFlags: 0
@@ -6851,7 +6851,7 @@ MonoBehaviour:
   - {fileID: 6825492241227536458, guid: c7286dc92975a0b46a9521cf109327e8, type: 3}
   pointSpawn: {fileID: 1922012053}
   timeWaitStart: 4
-  timeSpawn: {x: 4, y: 20}
+  timeSpawn: {x: 7, y: 28}
   timeRate: 2
 --- !u!1 &1967235421
 GameObject:
@@ -6976,9 +6976,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 113227283886977274, guid: 6df45aab6a30e734683dedc764e8619b, type: 3}
   pointSpawn: {fileID: 1970647507}
-  timeWaitStart: 100
-  timeSpawn: {x: 2, y: 5}
-  timeRate: 2
+  timeWaitStart: 108
+  timeSpawn: {x: 5, y: 30}
+  timeRate: 3
 --- !u!1 &1974447566
 GameObject:
   m_ObjectHideFlags: 0
@@ -7259,7 +7259,7 @@ MonoBehaviour:
   - {fileID: 4305630619841843767, guid: cdc5f05609fd18c43ac6114f0ffe6512, type: 3}
   pointSpawn: {fileID: 2020399118}
   timeWaitStart: 6
-  timeSpawn: {x: 10, y: 15}
+  timeSpawn: {x: 10, y: 25}
   timeRate: 2
 --- !u!1 &2021937770
 GameObject:
